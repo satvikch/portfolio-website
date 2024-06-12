@@ -1,0 +1,110 @@
+---
+// Define skills data
+const skills = [
+  { icon: "logos:javascript", name: "JavaScript" },
+  { icon: "logos:python", name: "Python" },
+  { icon: "logos:react", name: "React" },
+  { icon: "logos:nodejs", name: "Node.js" },
+  // { icon: "logos:git-icon", name: "Git" },
+  { icon: "logos:css-3", name: "CSS" },
+  { icon: "logos:html-5", name: "HTML" },
+  { icon: "logos:tailwindcss-icon", name: "Tailwind" },
+  { icon: "logos:aws", name: "AWS" },
+  { icon: "logos:tensorflow", name: "TensorFlow" },
+  { icon: "logos:pytorch-icon", name: "Pytorch" },
+  { icon: "logos:docker-icon", name: "Docker" },
+  { icon: "devicon:matlab", name: "Matlab" },
+  { icon: "devicon:numpy", name: "Numpy" },
+  { icon: "devicon:opencv", name: "OpenCV" },
+  { icon: "logos:seaborn-icon", name: "Seaborn" },
+  { icon: "devicon:keras", name: "Keras" },
+  { icon: "devicon:mysql", name: "MySQL" },
+  { icon: "devicon:mongodb", name: "MongoDB" },
+];
+
+// const web_skills = [
+//   { icon: "logos:javascript", name: "JavaScript" },
+//   { icon: "logos:react", name: "React" },
+//   { icon: "logos:nodejs", name: "Node.js" },
+//   // { icon: "logos:git-icon", name: "Git" },
+//   { icon: "logos:css-3", name: "CSS" },
+//   { icon: "logos:html-5", name: "HTML" },
+//   { icon: "logos:tailwindcss-icon", name: "Tailwind" },
+//   { icon: "devicon:mysql", name: "MySQL" },
+//   { icon: "logos:aws", name: "AWS" },
+// ];
+
+// const ml_skills = [
+//   { icon: "logos:python", name: "Python" },
+//   { icon: "logos:tensorflow", name: "TensorFlow" },
+//   { icon: "logos:pytorch-icon", name: "Pytorch" },
+//   { icon: "logos:docker-icon", name: "Docker" },
+//   { icon: "devicon:matlab", name: "Matlab" },
+//   { icon: "devicon:numpy", name: "Numpy" },
+//   { icon: "logos:seaborn-icon", name: "Seaborn" },
+//   { icon: "devicon:keras", name: "Keras" },
+// ];
+---
+
+<div>
+  <h2 class="mb-6 text-3xl text-center font-bold dark:text-neutral-200">
+    Skills
+  </h2>
+  <div
+    class="w-full grid items-stretch grid-cols-3 sm:grid-cols-4 md:grid-cols-9 gap-7"
+  >
+    {
+      skills.map((skill) => (
+        <div class="flex flex-col py-2 items-center">
+          <span class="iconify text-5xl" data-icon={skill.icon} />
+          <span class="mt-2 text-sm font-light text-neutral-600 dark:text-neutral-400">
+            {skill.name}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<!-- 
+<h2 class="mb-6 text-2xl text-center font-bold dark:text-neutral-200">
+  Skills
+</h2>
+
+<div class="flex flex-col md:flex-row justify-center items-start md:space-x-4">
+  <div class="w-full md:w-1/2">
+    <h3 class="mb-6 text-xl text-center font-bold dark:text-neutral-200">
+      Web Development
+    </h3>
+    <div class="grid grid-cols-3 sm:grid-cols-4 gap-7">
+      {
+        web_skills.map((skill) => (
+          <div class="flex flex-col py-2 items-center">
+            <span class="iconify text-5xl" data-icon={skill.icon} />
+            <span class="mt-2 text-sm font-light text-neutral-600 dark:text-neutral-400">
+              {skill.name}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 mt-8 md:mt-0">
+    <h3 class="mb-6 text-xl text-center font-bold dark:text-neutral-200">
+      Machine Learning
+    </h3>
+    <div class="grid grid-cols-3 sm:grid-cols-4 gap-7">
+      {
+        ml_skills.map((skill) => (
+          <div class="flex flex-col py-2 items-center">
+            <span class="iconify text-5xl" data-icon={skill.icon} />
+            <span class="mt-2 text-sm font-light text-neutral-600 dark:text-neutral-400">
+              {skill.name}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div> -->

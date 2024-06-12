@@ -1,0 +1,67 @@
+---
+const { title, description } = Astro.props;
+---
+
+<div class="relative z-20 w-full mx-auto lg:mx-0">
+  <h2
+    class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl"
+  >
+    {title}
+  </h2>
+  <p
+    class="mt-3 text-sm leading-6 text-neutral-600 dark:text-neutral-400 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg typed"
+  >
+    <div
+      class="mt-3 text-sm leading-6 text-neutral-600 dark:text-neutral-400 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg typed"
+      id="contentDiv"
+    >
+      {description}
+    </div>
+  </p>
+</div>
+
+<style>
+  #contentDiv {
+    visibility: hidden;
+  } /* Hide content initially */
+</style>
+
+<script type="text/javascript">
+  const printSentence = (id, speed = 50) => {
+    const element = document.getElementById(id);
+    if (!element) {
+      console.error("Element not found");
+      return;
+    }
+
+    const sentence = element.innerHTML; // Grab the current HTML content
+    element.innerHTML = ""; // Clear the existing content
+    element.style.visibility = "visible"; // Make element visible for typing animation
+
+    let index = 0;
+
+    let timer = setInterval(function () {
+      if (index < sentence.length) {
+        const char = sentence[index];
+
+        if (char === "<") {
+          const nextCloseTag = sentence.indexOf(">", index);
+          if (nextCloseTag !== -1) {
+            index = nextCloseTag;
+          }
+        }
+
+        element.innerHTML = sentence.slice(0, index + 1);
+        index++;
+
+        if (index === sentence.length) {
+          clearInterval(timer);
+        }
+      }
+    }, speed);
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    printSentence("contentDiv", 20); // Start typing as soon as DOM is ready
+  });
+</script>

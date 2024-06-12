@@ -1,0 +1,143 @@
+---
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
+import SquareLines from "../components/square-lines.astro";
+import Preloader from "../components/preloader.astro";
+import "../assets/css/main.css";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <!-- Used to add dark mode right away, adding here prevents any flicker -->
+    <script is:inline>
+      if (typeof Storage !== "undefined") {
+        if (
+          localStorage.getItem("dark_mode") &&
+          localStorage.getItem("dark_mode") == "true"
+        ) {
+          document.documentElement.classList.add("dark");
+        }
+      }
+    </script>
+
+    <style>
+      .prose img {
+        border-radius: 20px;
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <script src="../assets/css/main.css"></script>
+    <script
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    ></script>
+
+    <Fragment set:html={import.meta.env.HEADER_INJECT} />
+  </head>
+
+  <body class="antialiased bg-white dark:bg-neutral-950">
+    <Preloader />
+    <SquareLines />
+    <Header />
+    <slot />
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTopBtn"
+      class="fixed bottom-5 right-5 p-3 bg-neutral-500 dark:bg-neutral-600 text-white rounded-full shadow-lg cursor-pointer hover:bg-neutral-950 dark:hover:bg-neutral-400 transition duration-400 ease-in-out"
+    >
+      <span class="iconify" data-icon="akar-icons:circle-chevron-up-fill"
+      ></span>
+      <span
+        class="iconify arrow"
+        data-icon="bi:arrow-up-circle-fill"
+        style="position: absolute; bottom: 100%; opacity: 0;"></span>
+    </button>
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+    <Footer />
+    <script src="../assets/js/main.js"></script>
+    <Fragment set:html={import.meta.env.FOOTER_INJECT} />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        if (backToTopBtn) {
+          window.onscroll = function () {
+            if (window.pageYOffset > 500) {
+              // Adjust this value based on your preference
+              backToTopBtn.classList.remove("hidden"); // Show the button
+            } else {
+              backToTopBtn.classList.add("hidden"); // Hide the button
+            }
+          };
+
+          backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+      });
+    </script>
+
+    <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const preloader = document.querySelector(".preloader");
+
+      //   // Set a minimum time for the preloader to show (e.g., 2 seconds)
+      //   const minimumDisplayTime = 4700; // 2000 milliseconds = 2 seconds
+      //   const startTime = Date.now();
+
+      //   window.addEventListener("load", function () {
+      //     const elapsedTime = Date.now() - startTime;
+      //     const timeLeftToShow = minimumDisplayTime - elapsedTime;
+
+      //     if (timeLeftToShow > 0) {
+      //       // If the elapsed time is less than the minimum, wait the remaining time
+      //       setTimeout(() => {
+      //         if (preloader && preloader instanceof HTMLElement) {
+      //           preloader.style.display = "none";
+      //         }
+      //       }, timeLeftToShow);
+      //     } else {
+      //       // If the minimum time has already passed, hide the preloader immediately
+      //       if (preloader && preloader instanceof HTMLElement) {
+      //         preloader.style.display = "none";
+      //       }
+      //     }
+      //   });
+      // });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const preloader = document.querySelector(".preloader") as HTMLElement;
+
+        if (preloader) {
+          // Check if preloader is not null
+          window.addEventListener("load", function () {
+            setTimeout(() => {
+              if (preloader) {
+                preloader.classList.add("hide"); // Adds the class that starts the fade-out
+
+                // Optional: After transition ends, set display to none
+                preloader.addEventListener("transitionend", (event) => {
+                  if (event.propertyName === "opacity") {
+                    preloader.style.display = "none";
+                  }
+                });
+              }
+            }, 1800); //
+          });
+        } else {
+          console.log("Preloader element not found!");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Interactive 3D Character",
+    "description": "3D character with Three.js that interacts with the user's mouse pointer",
+    "image": "/assets/images/projects/3dheadtracking.png",
+    "url": "https://satvikch.github.io/3d_character_tracking/"
+  },
+  {
+    "name": "Weighted ℓ1-minimization",
+    "description": "Denosing Brain MR Images using WMCP",
+    "image": "/assets/images/projects/WMCP.png",
+    "url": "https://github.com/satvikch/WMCP-DL/tree/main"
+  },
+  {
+    "name": "ISpInPhase",
+    "description": "Non-Convex Optimization For Sparse Interferometric Phase Estimation.",
+    "image": "/assets/images/projects/SpInPhase.png",
+    "url": "https://github.com/satvikch/SpInPhase.git"
+  },
+  {
+    "name": "Job Search System",
+    "description": "3D character with Three.js that interacts with the user's mouse pointer",
+    "image": "/assets/images/projects/JobSearch.png",
+    "url": "https://github.com/satvikch/Job-Search-System"
+  },
+  {
+    "name": "KVS Language",
+    "description": "Simple programming language created using Prolog and Python.",
+    "image": "/assets/images/projects/KVS Language.png",
+    "url": "https://github.com/satvikch/Job-Search-System"
+  },
+  {
+    "name": "Ship-Detection-from-Satellite-Imagery",
+    "description": "Mask-RCNN models for ship detection from aerial datasets.",
+    "image": "/assets/images/projects/shipdetection.png",
+    "url": "https://github.com/satvikch/Ship-Detection-from-Satellite-Imagery.git"
+  },
+  {
+    "name": "Ship-Detection-from-Satellite-Imagery",
+    "description": "Mask-RCNN models for ship detection from aerial datasets.",
+    "image": "/assets/images/projects/shipdetection.png",
+    "url": "https://github.com/satvikch/Ship-Detection-from-Satellite-Imagery.git"
+  }
+]

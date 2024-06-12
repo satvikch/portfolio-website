@@ -1,0 +1,30 @@
+[
+  {
+    "dates": "Feb 2022 · Present",
+    "role": "Software Engineer",
+    "company": "Betalectic",
+    "description": "• Enhanced data management by migrating local MySQL databases to AWS, reducing data retrieval times to 300 ms and cutting operational costs by 20%. \n • Optimized real-time data visualization and monitoring using Grafana and Splunk, achieving a 30% improvement in system response times. \n • Streamlined backend workflows with Jenkins-driven CI/CD pipelines, ensuring seamless transitions of Python scripts during data migration efforts.",
+    "logo": "/assets/images/experiences/btc.ico"
+  },
+  {
+    "dates": "August 2019 · May 2022",
+    "role": "Research Scientist, Computer Vision",
+    "company": "Indian Insitute of Science (IISc)",
+    "description": "• Collaborated on innovative solutions for inverse problems in computational imaging, improving techniques like inpainting and denoising. \n • Developed machine learning models for medical diagnostics, enhancing image evaluation processes by 30% and boosting diagnostic accuracy. \n • Created iCare, an Android application for early detection of glaucoma, leading the project from conception through to securing investment..",
+    "logo": "/assets/images/experiences/IISc.ico"
+  },
+  {
+    "dates": "January 2019 · July 2019 ",
+    "role": "Machine Learning Engineer Intern",
+    "company": "Indian Insitute of Science (IISc)",
+    "description": "• Researched and applied advanced non-convex optimization techniques for image reconstruction, enhancing the denoising of brain MR images. \n • Innovated a sparse coding algorithm for dictionary learning, achieving a significant improvement in image quality as measured by a 1.36 dB increase in PSNR.",
+    "logo": "/assets/images/experiences/IISc.ico"
+  },
+  {
+    "dates": "June 2017 · August 2017 ",
+    "role": "Software Engineer Intern",
+    "company": "Schemax Tech",
+    "description": "• Developed and optimized an Android application for real estate management, integrating RESTful APIs for improved data communication. \n • Enhanced application performance, achieving a 25% increase in processing speed and a 20% reduction in memory usage through effective \n JSON parsing optimizations.",
+    "logo": "/assets/images/experiences/schemax.ico"
+  }
+]

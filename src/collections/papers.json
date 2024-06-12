@@ -1,0 +1,23 @@
+[
+  {
+    "name": "GFIRSTA",
+    "description": "Brain MRI Reconstruction",
+    "published": "Published In: IEEE ICIP 2020",
+    "image": "/assets/images/papers/GFIRSTA.png",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9190686"
+  },
+  {
+    "name": "WMCP",
+    "description": "Denoising Brain MR Images",
+    "published": "Published In: IEEE ISBI 2020",
+    "image": "/assets/images/papers/WMCP.jpg",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9098517"
+  },
+  {
+    "name": "iSpInPhase",
+    "description": "Interferometric Phase Estimation",
+    "published": "Published In: IEEE ICIP 2020",
+    "image": "/assets/images/papers/spinphase.png",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9191249"
+  }
+]

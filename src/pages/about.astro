@@ -1,0 +1,130 @@
+---
+import experiences from "../collections/experiences.json";
+import AboutExperience from "../components/about-experience.astro";
+import education from "../collections/education.json";
+import AboutEducation from "../components/about-education.astro";
+import PageHeading from "../components/page-heading.astro";
+import Layout from "../layouts/main.astro";
+import Projects from "../components/home/papers.astro";
+import SkillsOnTerminal from "../components/skills/skills-on-terminal/skillsOnTerminal.astro";
+// import "../components/skills/skills.css";
+import Skills from "../components/skills/skills_test.astro";
+---
+
+<Layout title="About Me">
+  <section class="relative z-20 max-w-4xl mx-auto my-12 px-7 lg:px-0">
+    <!-- <img src="/assets/images/about me.jpg" class="relative z-30 w-full my-10 rounded-xl" /> -->
+
+    <div class="container mx-auto flex items-center justify-center">
+      <div class="list-container w-5/6">
+        <PageHeading
+          title="About Me"
+          description="Hi 👋 I'm a your friendly neighborhood tech wizard and code whisperer. By day, I transform complex data into streamlined insights at lightning speed outpacing the Flash. By night, I'm a machine learning maestro, teaching computers to see, think, and occasionally judge my progress 😏."
+        />
+        <!-- <p class="mb-2 text-2xl font-semibold text-neutral-800 dark:text-neutral-200">
+          Short Bio -->
+        <ul
+          class="py-2 space-y-[3px] text-mid list-disc list-inside text-neutral-500 dark:text-neutral-400"
+        >
+          <li>Front-end enthusiast 🧙‍♂️</li>
+          <li>back-end grinding 🧑‍💻</li>
+          <li>Machine Learning experimenting 🧐</li>
+          <li>Machine Vision fanatic 👁️</li>
+          <li>Screenwriting hobby 📑</li>
+        </ul>
+      </div>
+
+      <div
+        class="image-container w-2/5 relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
+      >
+        <img src="/assets/images/prof.png" class="rounded-xl" alt="About Me" />
+      </div>
+    </div>
+
+    <!-- <h2 class="mb-2 text-2xl font-bold dark:text-neutral-200">Short Bio</h2>
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    > -->
+    <!-- My coding adventures span from the depths of neural networks to the peaks of cloud-based architectures, always accompanied by a trusty cup of coffee and an insatiable curiosity for solving the next big challenge. 
+      <br>
+      <br> -->
+    <!-- Front-end enthusiast 🧙‍♂️, back-end grinding 🧑‍💻, Machine Learning experimenting 🧐. -->
+    <!-- </p> -->
+
+    <section class="relative max-w-4xl my-20 mx-auto lg:px-0" id="skills">
+      <Skills />
+    </section>
+
+    <section class="relative max-w-4xl mx-auto lg:px-0">
+      <Projects />
+    </section>
+
+    <h2 class="mt-5 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200">
+      Experience
+    </h2>
+    <div class="px-5 py-10">
+      {
+        experiences.map((experience, loop) => {
+          return (
+            <>
+              {loop == 0 || loop == 1 || loop == 2 ? (
+                <div class="pb-10 border-l border-gray-200 dark:border-neutral-700">
+                  <AboutExperience
+                    dates={experience.dates}
+                    role={experience.role}
+                    company={experience.company}
+                    description={experience.description}
+                    logo={experience.logo}
+                  />
+                </div>
+              ) : (
+                <AboutExperience
+                  dates={experience.dates}
+                  role={experience.role}
+                  company={experience.company}
+                  description={experience.description}
+                  logo={experience.logo}
+                />
+              )}
+            </>
+          );
+        })
+      }
+    </div>
+
+    <h2
+      class="mt-2 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+    >
+      Education
+    </h2>
+    <div class="px-5 py-10">
+      {
+        education.map((education, loop) => {
+          return (
+            <>
+              {loop == 0 ? (
+                <div class="pb-10 border-l border-gray-200 dark:border-neutral-700">
+                  <AboutEducation
+                    dates={education.dates}
+                    course={education.course}
+                    college={education.college}
+                    level={education.level}
+                    logo={education.logo}
+                  />
+                </div>
+              ) : (
+                <AboutEducation
+                  dates={education.dates}
+                  course={education.course}
+                  college={education.college}
+                  level={education.level}
+                  logo={education.logo}
+                />
+              )}
+            </>
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>
