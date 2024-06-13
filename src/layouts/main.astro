@@ -2,8 +2,9 @@
 import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import SquareLines from "../components/square-lines.astro";
-import Preloader from "../components/preloader.astro";
 import "../assets/css/main.css";
+import Preloader from "../components/preloader.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -138,6 +139,70 @@ const { title } = Astro.props;
           console.log("Preloader element not found!");
         }
       });
+
+      // Before using it, extend the Window interface.
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const preloader = document.querySelector(".preloader") as HTMLElement;
+
+      //   // Use sessionStorage to check if the preloader was already shown
+      //   if (!sessionStorage.getItem("preloaderShown")) {
+      //     if (preloader) {
+      //       preloader.style.display = "block";
+      //       preloader.style.opacity = "1";
+
+      //       setTimeout(() => {
+      //         preloader.style.opacity = "0";
+      //         preloader.addEventListener("transitionend", () => {
+      //           preloader.style.display = "none";
+      //         });
+      //       }, 3000); // Display for 3 seconds
+
+      //       // Mark that the preloader has been shown in this session
+      //       sessionStorage.setItem("preloaderShown", "true");
+      //     } else {
+      //       console.error("Preloader element not found.");
+      //     }
+      //   } else {
+      //     if (preloader) {
+      //       preloader.style.display = "none";
+      //     }
+      //   }
+      // });
+
+      //   document.addEventListener("DOMContentLoaded", function () {
+      //     const preloader = document.querySelector(".preloader");
+
+      //     function hidePreloader() {
+      //       preloader.style.opacity = "0";
+      //       preloader.addEventListener("transitionend", () => {
+      //         preloader.style.display = "none";
+      //       });
+      //     }
+
+      //     // Use the modern Performance Navigation Timing API
+      //     const navigationEntry = performance.getEntriesByType(
+      //       "navigation"
+      //     )[0] as PerformanceNavigationTiming;
+
+      //     // Check if it's a full reload or initial page load
+      //     if (
+      //       !sessionStorage.getItem("preloaderShown") ||
+      //       navigationEntry.type === "reload" ||
+      //       navigationEntry.type === "navigate"
+      //     ) {
+      //       if (preloader) {
+      //         preloader.style.display = "block";
+      //         preloader.style.opacity = "1";
+      //         setTimeout(hidePreloader, 3000); // Display for 3 seconds
+      //         sessionStorage.setItem("preloaderShown", "true");
+      //       }
+      //     } else {
+      //       if (preloader) {
+      //         preloader.style.display = "none";
+      //       }
+      //     }
+      //   });
+      //
     </script>
   </body>
 </html>
