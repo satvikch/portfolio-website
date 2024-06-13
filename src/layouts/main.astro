@@ -42,7 +42,7 @@ const { title } = Astro.props;
   </head>
 
   <body class="antialiased bg-white dark:bg-neutral-950">
-    <Preloader />
+    <!-- <Preloader /> -->
     <SquareLines />
     <Header />
     <slot />
@@ -116,29 +116,29 @@ const { title } = Astro.props;
       //   });
       // });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const preloader = document.querySelector(".preloader") as HTMLElement;
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   const preloader = document.querySelector(".preloader") as HTMLElement;
 
-        if (preloader) {
-          // Check if preloader is not null
-          window.addEventListener("load", function () {
-            setTimeout(() => {
-              if (preloader) {
-                preloader.classList.add("hide"); // Adds the class that starts the fade-out
+      //   if (preloader) {
+      //     // Check if preloader is not null
+      //     window.addEventListener("load", function () {
+      //       setTimeout(() => {
+      //         if (preloader) {
+      //           preloader.classList.add("hide"); // Adds the class that starts the fade-out
 
-                // Optional: After transition ends, set display to none
-                preloader.addEventListener("transitionend", (event) => {
-                  if (event.propertyName === "opacity") {
-                    preloader.style.display = "none";
-                  }
-                });
-              }
-            }, 1800); //
-          });
-        } else {
-          console.log("Preloader element not found!");
-        }
-      });
+      //           // Optional: After transition ends, set display to none
+      //           preloader.addEventListener("transitionend", (event) => {
+      //             if (event.propertyName === "opacity") {
+      //               preloader.style.display = "none";
+      //             }
+      //           });
+      //         }
+      //       }, 1800); //
+      //     });
+      //   } else {
+      //     console.log("Preloader element not found!");
+      //   }
+      // });
 
       // Before using it, extend the Window interface.
       // document.addEventListener("DOMContentLoaded", function () {
