@@ -1,5 +1,5 @@
 ---
-const { title, description } = Astro.props;
+const { title, description1, description2 } = Astro.props;
 ---
 
 <div class="relative z-20 w-full mx-auto lg:mx-0">
@@ -12,10 +12,12 @@ const { title, description } = Astro.props;
     class="mt-3 text-sm leading-6 text-neutral-600 dark:text-neutral-400 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg typed"
   >
     <div
-      class="mt-3 text-sm leading-6 text-neutral-600 dark:text-neutral-400 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg typed"
+      class="mt-3 text-sm leading-6 text-neutral-600 dark:text-neutral-400 sm:mt-4 lg:mt-6 sm:leading-7 lg:leading-8 sm:text-base lg:text-md typed"
       id="contentDiv"
     >
-      {description}
+      {description1}
+      <br />
+      {description2}
     </div>
   </p>
 </div>
@@ -62,6 +64,6 @@ const { title, description } = Astro.props;
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    printSentence("contentDiv", 20); // Start typing as soon as DOM is ready
+    printSentence("contentDiv", 17); // Start typing as soon as DOM is ready
   });
 </script>
