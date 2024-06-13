@@ -34,11 +34,5 @@
     "description": "Mask-RCNN models for ship detection from aerial datasets.",
     "image": "/assets/images/projects/shipdetection.png",
     "url": "https://github.com/satvikch/Ship-Detection-from-Satellite-Imagery.git"
-  },
-  {
-    "name": "Ship-Detection-from-Satellite-Imagery",
-    "description": "Mask-RCNN models for ship detection from aerial datasets.",
-    "image": "/assets/images/projects/shipdetection.png",
-    "url": "https://github.com/satvikch/Ship-Detection-from-Satellite-Imagery.git"
   }
 ]
