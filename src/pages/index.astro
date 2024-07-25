@@ -9,43 +9,46 @@ import Layout from "../layouts/main.astro";
 
 <Layout title="Satvik">
   <div
-    class="relative z-20 w-full max-w-5xl mx-auto mt-16 px-7 md:mt-24 lg:mt-20 xl:px-0"
+    class="relative z-20 w-full max-w-5xl mx-auto mt-16 md:mt-24 lg:mt-20 xl:px-0"
   >
     <div class="flex flex-col items-center md:flex-row">
-      <div class="relative w-full md:w-1/2" id="contentDiv">
-        <h1
-          class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-4xl dark:text-white"
-        >
-          Satvik Chemudupati
-        </h1>
-
-        <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
+      <div class="relative w-full md:w-1/2">
+        <div id="contentDiv">
+          <h1
+            class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-4xl dark:text-white"
+          >
+            Satvik Chemudupati
+          </h1>
+        </div>
+        <p class="mb-5 text-base text-neutral-600 dark:text-neutral-400">
           <!-- I'm a software developer living in Tempe, Arizona. -->
-          Welcome to my digital portfolio! I am Satvik Chemudupati, a dedicated,
-          result-driven Master's student in Computer Software Engineering at Arizona
-          State University.
-          <br class="hidden lg:block" />
-          <br class="hidden lg:block" />
+          <span class="mb-3 hidden lg:block" style="text-align: justify;">
+            Welcome to my digital portfolio! I am Satvik Chemudupati, a
+            dedicated, result-driven Master's student in Computer Software
+            Engineering at Arizona State University.
+          </span>
           <!-- My coding adventures span from the depths of neural networks to the peaks
           of cloud-based architectures. -->
-          With over <b class="text-neutral-800 dark:text-neutral-300"
-            >3+ years professional experience</b
-          > in full-stack development, machine learning, and cloud technologies in
-          research and entrepreneurial environments.
-          <br class="hidden lg:block" />
-          <br class="hidden lg:block" />
-          <span class="hidden lg:block">
-            <!-- Always accompanied by a trusty cup of coffee ☕️ and an insatiable
-            curiosity 🧐 for solving the next big challenge... -->
-            Dive into my projects and experiences that demonstrate my passion for
-            innovation and problem-solving in both fields.
+          <span class="mb-4 hidden lg:block" style="text-align: justify;">
+            With over <b class="text-neutral-800 dark:text-neutral-300"
+              >3+ years professional experience</b
+            > in full-stack development, machine learning, and cloud technologies
+            in research and entrepreneurial environments.
+          </span>
+          <span class="mb-4 hidden lg:block" style="text-align: justify;">
+            I have published <b class="text-neutral-800 dark:text-neutral-300"
+              >3 papers</b
+            > at international <b class="text-neutral-800 dark:text-neutral-300"
+              >IEEE
+            </b> conferences, showcasing my commitment to advancing the field through
+            rigorous research and collaboration.
           </span>
           <!-- <br class="hidden lg:block" /><span class="hidden lg:block"
             >Aiming to achieve peak fitness like this one day. 😤</span
           > -->
         </p>
 
-        <p class="mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
+        <p class="font-semibold text-neutral-800 dark:text-neutral-200">
           My interests lie in:
         </p>
         <ul
@@ -108,7 +111,7 @@ import Layout from "../layouts/main.astro";
       </div> -->
 
       <div
-        class="relative justify-end hidden w-full mb-19.5 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0"
+        class="relative justify-end hidden w-full mb-19.5 md:flex md:pl-10 md:w-1/2 md:mt-0 md:-translate-y-4 xl:translate-y-5"
       >
         <div class="relative z-50 w-full">
           <div
@@ -128,7 +131,7 @@ import Layout from "../layouts/main.astro";
               src="/assets/images/pic_2.png"
               loading="eager"
               decoding="auto"
-              class="relative z-30 w-3/4 md:max-w-md mx-auto -translate-y-59 rounded-lg shadow-lg shadow-gray-950 dark:shadow-gray-600 dark:-translate-y-0.5"
+              class="relative z-30 w-4/5 md:max-w-md mx-auto -translate-y-59 rounded-lg shadow-lg shadow-gray-950 dark:shadow-gray-600 dark:-translate-y-0.5"
             />
           </div>
           <!-- <div
@@ -138,8 +141,9 @@ import Layout from "../layouts/main.astro";
         </div>
       </div>
     </div>
+
     <span
-      class="inline-flex justify-center mt-3 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"
+      class="inline-flex justify-center space-x-5 sm:ml-auto sm:mt-0 sm:justify-start"
     >
       <SocialIcons width="25" height="25" />
     </span>
@@ -183,11 +187,11 @@ import Layout from "../layouts/main.astro";
 <style>
   #contentDiv {
     visibility: hidden;
-  } /* Hide content initially */
+  }
 </style>
 
 <script type="text/javascript">
-  const printSentence = (id, speed = 50) => {
+  /* const printSentence = (id, speed = 50) => {
     const element = document.getElementById(id);
     if (!element) {
       console.error("Element not found");
@@ -223,5 +227,39 @@ import Layout from "../layouts/main.astro";
 
   document.addEventListener("DOMContentLoaded", () => {
     printSentence("contentDiv", 17); // Start typing as soon as DOM is ready
+  }); */
+
+  const printSentence = (id, speed = 50) => {
+    const element = document.getElementById(id);
+    if (!element) {
+      console.error("Element not found");
+      return;
+    }
+
+    const sentence = element.innerHTML; // Grab the current HTML content
+    element.innerHTML = ""; // Clear the existing content
+    element.style.visibility = "visible"; // Make element visible for typing animation
+
+    let index = 0;
+
+    let timer = setInterval(function () {
+      if (index < sentence.length) {
+        const char = sentence[index];
+
+        if (char === "<") {
+          const nextCloseTag = sentence.indexOf(">", index);
+          if (nextCloseTag !== -1) {
+            index = nextCloseTag;
+          }
+        }
+
+        element.innerHTML = sentence.slice(0, index + 1);
+        index++;
+      }
+    }, speed);
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    printSentence("contentDiv", 40); // Start typing as soon as DOM is ready
   });
 </script>

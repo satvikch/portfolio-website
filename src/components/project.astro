@@ -1,5 +1,63 @@
 ---
-const { name, description, url, image } = Astro.props;
+const { name, description, url, image, skills = [] } = Astro.props;
+
+// Define the type for skills and skill icons
+type Skill =
+  | "JavaScript"
+  | "C++"
+  | "Java"
+  | "Python"
+  | "Prolog"
+  | "HTML"
+  | "CSS"
+  | "Matlab"
+  | "Numpy"
+  | "OpenCV"
+  | "C"
+  | "Node.js"
+  | "AWS"
+  | "SparQL"
+  | "Tensorflow"
+  | "Three.js";
+
+const skillIcons: Record<Skill, string> = {
+  JavaScript: "skill-icons:javascript",
+  "C++": "logos:c-plusplus",
+  Java: "logos:java",
+  Python: "logos:python",
+  Prolog: "file-icons:prolog",
+  HTML: "vscode-icons:file-type-html",
+  CSS: "vscode-icons:file-type-css",
+  Matlab: "devicon:matlab",
+  Numpy: "logos:numpy",
+  OpenCV: "devicon:opencv",
+  C: "devicon:c",
+  "Node.js": "logos:nodejs",
+  AWS: "logos:aws",
+  SparQL: "vscode-icons:file-type-sparql",
+  Tensorflow: "logos:tensorflow",
+  "Three.js": "logos:threejs",
+};
+
+// Define the type of the skills array
+interface ProjectProps {
+  name: string;
+  description: string;
+  url: string;
+  image: string;
+  skills?: string[];
+}
+
+// Type guard to check if a skill is valid
+const isValidSkill = (skill: any): skill is Skill => skill in skillIcons;
+
+// Filter skills to only include those that are defined in skillIcons
+const filteredSkills: Skill[] = (skills as string[]).filter(isValidSkill);
+
+// Log the skills to the console
+if (filteredSkills.length > 0) {
+  console.log(`Skills for ${name}:`, filteredSkills);
+}
 ---
 
 <a
@@ -57,12 +115,27 @@ const { name, description, url, image } = Astro.props;
           ></svg
         >
       </span>
-      <span class="text-sm text-neutral-600 dark:text-neutral-400"
-        >{description}</span
-      >
-      <!-- <span class="text-sm text-neutral-600 dark:text-neutral-400"
-        >{description}</span
-      > -->
+      <span class="text-sm text-neutral-600 dark:text-neutral-400">
+        {description}
+      </span>
+      {
+        filteredSkills.length > 0 && (
+          <span class="flex mt-2 space-x-6">
+            {filteredSkills.map((skill: Skill) => (
+              <span class="w-6 h-6">
+                <iconify-icon
+                  icon={skillIcons[skill]}
+                  title={skill}
+                  width="24"
+                  height="24"
+                />
+              </span>
+            ))}
+          </span>
+        )
+      }
     </span>
   </span>
 </a>
+
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
