@@ -32,7 +32,7 @@
     "description": "Simple programming language created using Prolog and Python.",
     "image": "/assets/images/projects/KVS Language.png",
     "url": "https://github.com/satvikch/Job-Search-System",
-    "skills": ["HTML", "CSS", "JavaScript", "Node.js", "Java"]
+    "skills": ["Prolog", "Python", "C++", "MySQL"]
   },
   {
     "name": "Ship Detection Satellite Imagery",

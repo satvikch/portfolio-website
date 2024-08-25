@@ -18,14 +18,16 @@ type Skill =
   | "AWS"
   | "SparQL"
   | "Tensorflow"
-  | "Three.js";
+  | "Three.js"
+  | "MySQL"
+  | "Prolog";
 
 const skillIcons: Record<Skill, string> = {
   JavaScript: "skill-icons:javascript",
   "C++": "logos:c-plusplus",
   Java: "logos:java",
   Python: "logos:python",
-  Prolog: "file-icons:prolog",
+  Prolog: "devicon:prolog",
   HTML: "vscode-icons:file-type-html",
   CSS: "vscode-icons:file-type-css",
   Matlab: "devicon:matlab",
@@ -37,6 +39,7 @@ const skillIcons: Record<Skill, string> = {
   SparQL: "vscode-icons:file-type-sparql",
   Tensorflow: "logos:tensorflow",
   "Three.js": "logos:threejs",
+  MySQL: "logos:mysql",
 };
 
 // Define the type of the skills array
@@ -54,10 +57,10 @@ const isValidSkill = (skill: any): skill is Skill => skill in skillIcons;
 // Filter skills to only include those that are defined in skillIcons
 const filteredSkills: Skill[] = (skills as string[]).filter(isValidSkill);
 
-// Log the skills to the console
-if (filteredSkills.length > 0) {
-  console.log(`Skills for ${name}:`, filteredSkills);
-}
+// // Log the skills to the console
+// if (filteredSkills.length > 0) {
+//   console.log(`Skills for ${name}:`, filteredSkills);
+// }
 ---
 
 <a
