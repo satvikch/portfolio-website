@@ -1,25 +1,25 @@
 ---
 // Define skills data
-const skills = [
+const home_skills = [
   { icon: "logos:javascript", name: "JavaScript" },
   { icon: "logos:python", name: "Python" },
   { icon: "logos:react", name: "React" },
   { icon: "logos:nodejs", name: "Node.js" },
   // { icon: "logos:git-icon", name: "Git" },
-  { icon: "logos:css-3", name: "CSS" },
-  { icon: "logos:html-5", name: "HTML" },
-  { icon: "logos:tailwindcss-icon", name: "Tailwind" },
+  //   { icon: "logos:css-3", name: "CSS" },
+  //   { icon: "logos:html-5", name: "HTML" },
+  //   { icon: "logos:tailwindcss-icon", name: "Tailwind" },
   { icon: "logos:aws", name: "AWS" },
-  { icon: "logos:tensorflow", name: "TensorFlow" },
-  { icon: "logos:pytorch-icon", name: "Pytorch" },
-  { icon: "logos:docker-icon", name: "Docker" },
-  { icon: "devicon:matlab", name: "Matlab" },
+  //   { icon: "logos:tensorflow", name: "TensorFlow" },
+  //   { icon: "logos:pytorch-icon", name: "Pytorch" },
+  //   { icon: "logos:docker-icon", name: "Docker" },
+  //   { icon: "devicon:matlab", name: "Matlab" },
   // { icon: "devicon:numpy", name: "Numpy" },
-  { icon: "devicon:opencv", name: "OpenCV" },
+  //   { icon: "devicon:opencv", name: "OpenCV" },
   // { icon: "logos:seaborn-icon", name: "Seaborn" },
-  { icon: "devicon:keras", name: "Keras" },
+  //   { icon: "devicon:keras", name: "Keras" },
   { icon: "devicon:mysql", name: "MySQL" },
-  { icon: "devicon:mongodb", name: "MongoDB" },
+  //   { icon: "devicon:mongodb", name: "MongoDB" },
   { icon: "devicon:java", name: "Java" },
   { icon: "logos:kafka-icon", name: "Kafka" },
   // { icon: "logos:flask", name: "Flask" },
@@ -50,21 +50,15 @@ const skills = [
 ---
 
 <div>
-  <h2 class="mb-6 text-3xl font-bold dark:text-neutral-200">Skills</h2>
-  <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
-    Explore the toolbox of my expertise. Below, you'll find the languages,
-    frameworks, and tools that I wield to turn complex problems into elegant
-    solutions
-  </p>
   <div
     class="w-full grid items-stretch grid-cols-3 sm:grid-cols-4 md:grid-cols-9 gap-7"
   >
     {
-      skills.map((skill) => (
+      home_skills.map((home_skill) => (
         <div class="flex flex-col py-2 items-center">
-          <span class="iconify text-5xl" data-icon={skill.icon} />
+          <span class="iconify text-3xl" data-icon={home_skill.icon} />
           <span class="mt-2 text-sm font-light text-neutral-600 dark:text-neutral-400">
-            {skill.name}
+            {home_skill.name}
           </span>
         </div>
       ))

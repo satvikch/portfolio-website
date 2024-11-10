@@ -4,6 +4,8 @@ import Button from "../components/button.astro";
 import Projects from "../components/home/recent_project.astro";
 import Separator from "../components/home/separator.astro";
 import Writings from "../components/home/writings.astro";
+import HomeSkills from "../components/skills/home_skills.astro";
+import SkillsTest from "../components/skills/skills_test.astro";
 import Layout from "../layouts/main.astro";
 ---
 
@@ -12,7 +14,7 @@ import Layout from "../layouts/main.astro";
     class="relative z-20 w-full max-w-5xl mx-auto mt-16 md:mt-24 lg:mt-20 xl:px-0"
   >
     <div class="flex flex-col items-center md:flex-row">
-      <div class="relative w-full md:w-1/2">
+      <div class="relative w-full md:w-3/4">
         <div id="contentDiv">
           <h1
             class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-4xl dark:text-white"
@@ -23,30 +25,52 @@ import Layout from "../layouts/main.astro";
         <p class="mb-5 text-base text-neutral-600 dark:text-neutral-400">
           <!-- I'm a software developer living in Tempe, Arizona. -->
           <span class="mb-3 hidden lg:block" style="text-align: justify;">
-            Welcome to my digital portfolio! I am Satvik Chemudupati, a
-            dedicated, result-driven Master's student in Computer Software
-            Engineering at Arizona State University.
+            Welcome to my digital portfolio! I am Satvik Chemudupati, a <b
+              class="text-neutral-800 dark:text-neutral-300"
+              >Software Engineer</b
+            > with over <b class="text-neutral-800 dark:text-neutral-300"
+              >4 years of experience</b
+            > in backend development distributed and systems.
           </span>
           <!-- My coding adventures span from the depths of neural networks to the peaks
           of cloud-based architectures. -->
           <span class="mb-4 hidden lg:block" style="text-align: justify;">
-            With over <b class="text-neutral-800 dark:text-neutral-300"
-              >3+ years professional experience</b
-            > in full-stack development, machine learning, and cloud technologies
-            in research and entrepreneurial environments.
+            I specialize in building <b
+              class="text-neutral-800 dark:text-neutral-300"
+              >scalable, secure applications</b
+            > with a focus on efficiency and reliability.
           </span>
           <span class="mb-4 hidden lg:block" style="text-align: justify;">
-            I have published <b class="text-neutral-800 dark:text-neutral-300"
-              >3 papers</b
+            Key achievements include reducing API response times by <b
+              class="text-neutral-800 dark:text-neutral-300">30%</b
+            >, increasing data throughput by <b
+              class="text-neutral-800 dark:text-neutral-300">25%</b
+            >, and maintaining <b class="text-neutral-800 dark:text-neutral-300"
+              >99%</b
+            > uptime for high-demand applications.
+          </span>
+          <span class="mb-4 hidden lg:block" style="text-align: justify;">
+            Committed to advancing the field, I have published <b
+              class="text-neutral-800 dark:text-neutral-300">4 papers</b
             > at international <b class="text-neutral-800 dark:text-neutral-300"
-              >IEEE
-            </b> conferences, showcasing my commitment to advancing the field through
-            rigorous research and collaboration.
+              >IEEE conferences</b
+            >, showcasing my dedication to rigorous research and impactful
+            collaboration.
+          </span>
+
+          <span class="mb-4 hidden lg:block" style="text-align: justify;">
+            Explore my work to see how I apply cutting-edge technology to create
+            robust, user-centered solutions.
           </span>
           <span class="mb-4 hidden lg:block" style="text-align: justify;">
             <b class="text-neutral-800 dark:text-neutral-300">Tech Stack:</b> Python,
-            AWS, TensorFlow, PyTorch, SQL, JavaScript.
+            C++, Java, AWS, Docker, Kafka, TensorFlow, PyTorch, SQL, JavaScript,
+            Node.js, React
           </span>
+          <!-- 
+          <span class="mb-4 hidden lg:block" style="text-align: justify;">
+            <HomeSkills />
+          </span> -->
         </p>
 
         <p class="font-semibold text-neutral-800 dark:text-neutral-200">
@@ -55,11 +79,11 @@ import Layout from "../layouts/main.astro";
         <ul
           class="py-2 space-y-[3px] text-base list-disc list-inside text-neutral-500 dark:text-neutral-400"
         >
-          <li>Full-Stack Development</li>
-          <li>Machine Learning</li>
-          <li>Deep Learning</li>
-          <li>Computer Vision</li>
-          <li>Data Science</li>
+          <li>Scalable Backend and Full-Stack Development</li>
+          <li>Machine Learning & Deep Learning for Data-Driven Applications</li>
+          <li>Computer Vision for Real-Time Processing</li>
+          <li>Distributed Systems & High-Performance Data Processing</li>
+          <li>Cloud Technologies & Containerized Deployments</li>
           <li>and more...</li>
         </ul>
         <br />
@@ -132,7 +156,7 @@ import Layout from "../layouts/main.astro";
               src="/assets/images/pic_2.png"
               loading="eager"
               decoding="auto"
-              class="relative z-30 w-4/5 md:max-w-md mx-auto -translate-y-59 rounded-lg shadow-lg shadow-gray-950 dark:shadow-gray-600 dark:-translate-y-0.5"
+              class="relative z-30 w-6/7 md:max-w-md mx-auto -translate-y-59 rounded-lg shadow-lg shadow-gray-950 dark:shadow-gray-600 dark:-translate-y-0.5"
             />
           </div>
           <!-- <div
@@ -148,51 +172,49 @@ import Layout from "../layouts/main.astro";
     >
       <SocialIcons width="25" height="25" />
     </span>
-  </div>
 
-  <div id="Projects">
-    <Separator id="Projects" text="Check out my projects" />
-    <Projects />
-  </div>
-  <div id="Writings">
-    <Separator id="Writings" text="Some of my writing" />
-    <Writings />
-  </div>
+    <div id="Projects">
+      <Separator id="Projects" text="Check out my projects" />
+      <Projects />
+    </div>
+    <div id="Writings">
+      <Separator id="Writings" text="Some of my writing" />
+      <Writings />
+    </div>
 
-  <section class="relative z-20 max-w-4xl mx-auto my-12 px-7 lg:px-0">
-    <h2
-      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
-    >
-      Let's Connect
-    </h2>
-    <p
-      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
-    >
-      Peek into my digital cauldron on <a
-        href="https://github.com/satvikch"
-        target="_blank"
-        class="text-violet-600 underline">GitHub</a
+    <section class="relative z-20 max-w-4xl mx-auto my-12 px-7 lg:px-0">
+      <h2
+        class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
       >
-      or <a
-        href="https://www.linkedin.com/in/chemudupati-satvik/"
-        target="_blank"
-        class="text-violet-600 underline">LinkedIn</a
-      > to see what tech potions I'm brewing! , or you can send me an <a
-        href="mailto:schemudu@asu.edu"
-        class="text-violet-600 underline">Email</a
-      > and I'll be sure to get back to you.
-    </p>
-  </section>
-</Layout>
+        Let's Connect
+      </h2>
+      <p
+        class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+      >
+        Peek into my digital cauldron on <a
+          href="https://github.com/satvikch"
+          target="_blank"
+          class="text-violet-600 underline">GitHub</a
+        >
+        or <a
+          href="https://www.linkedin.com/in/chemudupati-satvik/"
+          target="_blank"
+          class="text-violet-600 underline">LinkedIn</a
+        > to see what tech potions I'm brewing! , or you can send me an <a
+          href="mailto:schemudu@asu.edu"
+          class="text-violet-600 underline">Email</a
+        > and I'll be sure to get back to you.
+      </p>
+    </section>
 
-<style>
-  #contentDiv {
-    visibility: hidden;
-  }
-</style>
+    <style>
+      #contentDiv {
+        visibility: hidden;
+      }
+    </style>
 
-<script type="text/javascript">
-  /* const printSentence = (id, speed = 50) => {
+    <script type="text/javascript">
+      /* const printSentence = (id, speed = 50) => {
     const element = document.getElementById(id);
     if (!element) {
       console.error("Element not found");
@@ -230,37 +252,39 @@ import Layout from "../layouts/main.astro";
     printSentence("contentDiv", 17); // Start typing as soon as DOM is ready
   }); */
 
-  const printSentence = (id, speed = 50) => {
-    const element = document.getElementById(id);
-    if (!element) {
-      console.error("Element not found");
-      return;
-    }
-
-    const sentence = element.innerHTML; // Grab the current HTML content
-    element.innerHTML = ""; // Clear the existing content
-    element.style.visibility = "visible"; // Make element visible for typing animation
-
-    let index = 0;
-
-    let timer = setInterval(function () {
-      if (index < sentence.length) {
-        const char = sentence[index];
-
-        if (char === "<") {
-          const nextCloseTag = sentence.indexOf(">", index);
-          if (nextCloseTag !== -1) {
-            index = nextCloseTag;
-          }
+      const printSentence = (id, speed = 50) => {
+        const element = document.getElementById(id);
+        if (!element) {
+          console.error("Element not found");
+          return;
         }
 
-        element.innerHTML = sentence.slice(0, index + 1);
-        index++;
-      }
-    }, speed);
-  };
+        const sentence = element.innerHTML; // Grab the current HTML content
+        element.innerHTML = ""; // Clear the existing content
+        element.style.visibility = "visible"; // Make element visible for typing animation
 
-  document.addEventListener("DOMContentLoaded", () => {
-    printSentence("contentDiv", 40); // Start typing as soon as DOM is ready
-  });
-</script>
+        let index = 0;
+
+        let timer = setInterval(function () {
+          if (index < sentence.length) {
+            const char = sentence[index];
+
+            if (char === "<") {
+              const nextCloseTag = sentence.indexOf(">", index);
+              if (nextCloseTag !== -1) {
+                index = nextCloseTag;
+              }
+            }
+
+            element.innerHTML = sentence.slice(0, index + 1);
+            index++;
+          }
+        }, speed);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        printSentence("contentDiv", 40); // Start typing as soon as DOM is ready
+      });
+    </script>
+  </div>
+</Layout>

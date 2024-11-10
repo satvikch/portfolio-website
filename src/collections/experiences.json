@@ -3,21 +3,14 @@
     "dates": "Feb 2022 · Present",
     "role": "Software Engineer",
     "company": "Betalectic",
-    "description": "• Enhanced data management by migrating local MySQL databases to AWS, reducing data retrieval times to 300 ms and cutting operational costs by 20%. \n • Optimized real-time data visualization and monitoring using Grafana and Splunk, achieving a 30% improvement in system response times. \n • Streamlined backend workflows with Jenkins-driven CI/CD pipelines, ensuring seamless transitions of Python scripts during data migration efforts.",
+    "description": "• Developed real-time microservices for a B2B finance platform, focusing on secure payment processing with scalable RESTful APIs in NodeJS and AWS database migration. \n • Built and integrated a Forex risk management module with real-time UI updates in React.js and efficient local storage using MongoDB. \n • Created a time-series data pipeline with AWS Timestream to track real-time metrics, improving retrieval speeds by 20% for low-latency data access. \n • Designed secure RESTful financial APIs for cross-functional teams, handling over 5K daily requests with reliable external system integration.",
     "logo": "/assets/images/experiences/btc.ico"
   },
   {
-    "dates": "August 2019 · May 2022",
-    "role": "Research Scientist, Computer Vision",
-    "company": "Indian Insitute of Science (IISc)",
-    "description": "• Collaborated on innovative solutions for inverse problems in computational imaging, improving techniques like inpainting and denoising. \n • Developed machine learning models for medical diagnostics, enhancing image evaluation processes by 30% and boosting diagnostic accuracy. \n • Created iCare, an Android application for early detection of glaucoma, leading the project from conception through to securing investment..",
-    "logo": "/assets/images/experiences/IISc.ico"
-  },
-  {
-    "dates": "January 2019 · July 2019 ",
-    "role": "Machine Learning Engineer Intern",
-    "company": "Indian Insitute of Science (IISc)",
-    "description": "• Researched and applied advanced non-convex optimization techniques for image reconstruction, enhancing the denoising of brain MR images. \n • Innovated a sparse coding algorithm for dictionary learning, achieving a significant improvement in image quality as measured by a 1.36 dB increase in PSNR.",
+    "dates": "January 2019 · May 2022",
+    "role": "Software Engineer",
+    "company": "Spectrum Lab",
+    "description": "• Designed distributed backend architectures for scalable, high-availability data systems, reducing processing time by 40%. \n • Developed Python and C++ algorithms to optimize data pipelines, enhancing speed and memory efficiency. \n • Architected Apache Kafka data pipelines, boosting data throughput by 25% and reducing processing time by 30%. \n • Deployed solutions on AWS EC2 to improve service reliability and response times by 15%, enhancing data insights. \n • Built secure, high-reliability RESTful APIs with Flask, handling 10,000+ daily requests with 99% uptime. \n • Optimized API performance with Redis caching, reducing response times by 30% on high-traffic endpoints. \n • Containerized services with Docker, achieving streamlined deployments and efficient monitoring with AWS ECS.",
     "logo": "/assets/images/experiences/IISc.ico"
   },
   {
