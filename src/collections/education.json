@@ -1,16 +1,16 @@
 [
-	{
-		"dates": "August 2022 · Present",
-		"course": "Computer Software Engineering -- GPA: 3.91/4.0",
-		"college": "Arizona State University",
-		"level": "Master of Science",
-		"logo": "/assets/images/education/asu.png"
-	},
-	{
-		"dates": "August 2015 · July 2019",
-		"course": "Computer Science and Engineering",
-		"college": "BML Munjal University",
-		"level": "Bachelor of Technology",
-		"logo": "/assets/images/education/bml.png"
-	}
+  {
+    "dates": "August 2022 · December 2025",
+    "course": "Computer Software Engineering -- GPA: 3.98/4.0",
+    "college": "Arizona State University",
+    "level": "Master of Science",
+    "logo": "/assets/images/education/asu.png"
+  },
+  {
+    "dates": "August 2015 · July 2019",
+    "course": "Computer Science and Engineering",
+    "college": "BML Munjal University",
+    "level": "Bachelor of Technology",
+    "logo": "/assets/images/education/bml.png"
+  }
 ]

@@ -9,11 +9,12 @@ const skills = [
   { icon: "logos:css-3", name: "CSS" },
   { icon: "logos:html-5", name: "HTML" },
   { icon: "logos:tailwindcss-icon", name: "Tailwind" },
+  { icon: "logos:go", name: "Go" },
   { icon: "logos:aws", name: "AWS" },
-  { icon: "logos:tensorflow", name: "TensorFlow" },
+  // { icon: "logos:tensorflow", name: "TensorFlow" },
   { icon: "logos:pytorch-icon", name: "Pytorch" },
   { icon: "logos:docker-icon", name: "Docker" },
-  { icon: "devicon:matlab", name: "Matlab" },
+  { icon: "devicon:postgresql", name: "PostgreSQL" },
   // { icon: "devicon:numpy", name: "Numpy" },
   { icon: "devicon:opencv", name: "OpenCV" },
   // { icon: "logos:seaborn-icon", name: "Seaborn" },
@@ -62,7 +63,10 @@ const skills = [
     {
       skills.map((skill) => (
         <div class="flex flex-col py-2 items-center">
-          <span class="iconify text-5xl" data-icon={skill.icon} />
+          <span
+            class={`iconify text-5xl ${skill.name === "Go" ? "scale-75" : ""}`}
+            data-icon={skill.icon}
+          />
           <span class="mt-2 text-sm font-light text-neutral-600 dark:text-neutral-400">
             {skill.name}
           </span>

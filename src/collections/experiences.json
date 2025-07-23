@@ -1,7 +1,14 @@
 [
   {
-    "dates": "Feb 2022 · Present",
+    "dates": "March 2025 · June 2025",
     "role": "Software Engineer",
+    "company": "Verizon (Contract)",
+    "description": "• Developed React.js front-end for managing in-store marketing campaigns across Verizon retail kiosks. \n • Built modules for campaign creation, segmentation, and dynamic content configuration. \n • Integrated with PostgreSQL and developed backend services in Go, improving API performance and reliability. \n • Utilized Swagger UI for API testing and seamless integration between frontend and backend.",
+    "logo": "/assets/images/experiences/verizon.svg"
+  },
+  {
+    "dates": "February 2022 · July 2024",
+    "role": "Software Engineer Intern",
     "company": "Betalectic",
     "description": "• Developed real-time microservices for a B2B finance platform, focusing on secure payment processing with scalable RESTful APIs in NodeJS and AWS database migration. \n • Built and integrated a Forex risk management module with real-time UI updates in React.js and efficient local storage using MongoDB. \n • Created a time-series data pipeline with AWS Timestream to track real-time metrics, improving retrieval speeds by 20% for low-latency data access. \n • Designed secure RESTful financial APIs for cross-functional teams, handling over 5K daily requests with reliable external system integration.",
     "logo": "/assets/images/experiences/btc.ico"
